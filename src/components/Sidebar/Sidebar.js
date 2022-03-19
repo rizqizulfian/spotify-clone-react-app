@@ -9,7 +9,7 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <img className="sidebar__logo" height="50px" style={{padding: '20px', marginRight: 'auto'}} src={iconSpotifyLogo} alt="" />
+      <img className="sidebar__logo" height="50px" style={{ padding: '20px', marginRight: 'auto' }} src={iconSpotifyLogo} alt="" />
       <SidebarOption Icon={HomeIcon} title="Home" />
       <SidebarOption Icon={SearchIcon} title="Search" />
       <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
@@ -17,6 +17,10 @@ const Sidebar = () => {
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
+
+      <SidebarOption title="Hip hop" />
+      <SidebarOption title="Rock" />
+      <SidebarOption title="RnB" />
     </div>
   );
 };
