@@ -1,10 +1,11 @@
 import React from 'react';
 import "./Sidebar.css";
+import iconSpotifyLogo from '../../assets/img/spotify-logo.png';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h1>I am the Sidebar</h1>
+      <img className="sidebar__logo" height="50px" style={{padding: '10px', marginRight: 'auto'}} src={iconSpotifyLogo} alt="" />
     </div>
   )
 };
