@@ -5,8 +5,11 @@ import iconSpotifyLogo from '../../assets/img/spotify-logo.png';
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import { useDataLayerValue } from '../../utils/DataLayer';
 
 const Sidebar = () => {
+  const [{ playlists }, dispatch] = useDataLayerValue();
+  console.log('ini masuk si playlists', playlists)
   return (
     <div className="sidebar">
       <img className="sidebar__logo" height="50px" style={{ padding: '20px', marginRight: 'auto' }} src={iconSpotifyLogo} alt="" />
@@ -18,9 +21,9 @@ const Sidebar = () => {
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
 
-      <SidebarOption title="Hip hop" />
-      <SidebarOption title="Rock" />
-      <SidebarOption title="RnB" />
+      {playlists?.items?.map(playlist => (
+        <SidebarOption title={playlist.name} />
+      ))}
     </div>
   );
 };
