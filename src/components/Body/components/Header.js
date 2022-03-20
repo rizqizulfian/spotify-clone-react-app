@@ -3,8 +3,12 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Avatar } from '@mui/material';
 import "./Header.css";
+import { useDataLayerValue } from '../../../utils/DataLayer';
 
 const Header = () => {
+  const [{user }, dispatch] = useDataLayerValue();
+
+
   return (
     <div className="header">
       <div className="header__left">
@@ -16,8 +20,8 @@ const Header = () => {
       </div>
 
       <div className="header__right">
-        <Avatar src="" alt="RQ" />
-        <h4>Rafeh Qazi</h4>
+        <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
+        <h4>{user?.display_name}</h4>
       </div>
     </div>
   );
