@@ -5,6 +5,9 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import RepeatIcon from '@mui/icons-material/Repeat';
+import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
+import VolumeDownIcon from '@mui/icons-material/VolumeDown';
+import { Grid, Slider } from '@mui/material';
 
 import "./Footer.css";
 
@@ -12,7 +15,11 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__left">
-        <p>Album and song details</p>
+        <img className="footer__albumLogo" src="https://cdns-images.dzcdn.net/images/cover/cb3c5907fc103288135db863a70d66f7/500x500.jpg" alt="" />
+        <div className="footer__songInfo">
+          <h4>Yeah!</h4>
+          <p>Usher</p>
+        </div>
       </div>
 
       <div className="footer__center">
@@ -24,7 +31,17 @@ const Footer = () => {
       </div>
 
       <div className="footer__right">
-        <p>Volume controls</p>
+        <Grid container spacing={2}>
+          <Grid item>
+            <PlaylistPlayIcon />
+          </Grid>
+          <Grid item>
+            <VolumeDownIcon />
+          </Grid>
+          <Grid item xs>
+            <Slider />
+          </Grid>
+        </Grid>
       </div>
     </div>
   )
