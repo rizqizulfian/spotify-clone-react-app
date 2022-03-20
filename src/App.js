@@ -36,8 +36,14 @@ function App() {
           playlists,
         });
       });
-    };
-    console.log('ini token', _token)
+
+      spotify.getPlaylist('37i9dQZEVXcSy5OH70RXcG').then((response) => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
+        });
+      });
+    }
   }, []);
   console.log('ini result hasil', user)
 
