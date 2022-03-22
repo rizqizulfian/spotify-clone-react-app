@@ -7,7 +7,6 @@ const SongRow = ({ track }) => {
 
   const setCurrentTrack = (e) => {
     e.preventDefault();
-    console.log('ini masuk yaa setCurrent', track)
     dispatch({
       type: 'SET_CURRENT_TRACK',
       track
