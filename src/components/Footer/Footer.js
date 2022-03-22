@@ -1,14 +1,6 @@
 import React from 'react';
 
-// import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-// import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-// import SkipNextIcon from '@mui/icons-material/SkipNext';
-// import ShuffleIcon from '@mui/icons-material/Shuffle';
-// import RepeatIcon from '@mui/icons-material/Repeat';
-// import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
-// import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 import AudioPlayer from 'react-h5-audio-player';
-// import { Grid, Slider } from '@mui/material';
 
 import "./Footer.css";
 import 'react-h5-audio-player/lib/styles.css';
@@ -29,11 +21,6 @@ const Footer = () => {
       </div>
 
       <div className="footer__center">
-        {/* <ShuffleIcon className="footer__green" />
-        <SkipPreviousIcon className="footer__icon" />
-        <PlayCircleOutlineIcon className="" fontSize="large" />
-        <SkipNextIcon className="footer__icon" />
-        <RepeatIcon className="footer__green" /> */}
         <div id="player">
           <div className="track-slider">
             <AudioPlayer
@@ -49,17 +36,6 @@ const Footer = () => {
       </div>
 
       <div className="footer__right">
-        {/* <Grid container spacing={2}>
-          <Grid item>
-            <PlaylistPlayIcon />
-          </Grid>
-          <Grid item>
-            <VolumeDownIcon />
-          </Grid>
-          <Grid item xs>
-            <Slider />
-          </Grid>
-        </Grid> */}
       </div>
     </div>
   )
