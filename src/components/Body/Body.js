@@ -10,7 +10,7 @@ import "./Body.css";
 
 const Body = ({ spotify }) => {
   const [{ discover_weekly }, dispatch] = useDataLayerValue();
-  console.log('ini masuk dis', discover_weekly)
+
   return (
     <div className="body">
       <Header spotify={spotify} />
@@ -31,8 +31,8 @@ const Body = ({ spotify }) => {
           <MoreHorizIcon />
         </div>
 
-        {discover_weekly?.tracks.items.map(item => (
-          <SongRow track={item.track} />
+        {discover_weekly?.tracks.items.map((item, i) => (
+          <SongRow key={i} track={item.track} />
         ))}
       </div>
     </div>

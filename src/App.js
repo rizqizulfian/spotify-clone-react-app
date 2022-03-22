@@ -23,10 +23,10 @@ function App() {
         token: _token,
       })
       spotify.setAccessToken(_token);
-      spotify.getMe().then(user => {
+      spotify.getMe().then(response => {
         dispatch({
           type: 'SET_USER',
-          user,
+          user: response,
         });
       });
 
@@ -45,7 +45,6 @@ function App() {
       });
     }
   }, []);
-  console.log('ini result hasil', user)
 
   return (
     <div className="app">

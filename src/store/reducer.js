@@ -8,6 +8,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
+  console.log('ini masuk reducer', action)
   switch (action.type) {
     case 'SET_USER':
       return {
@@ -30,6 +31,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         discover_weekly: action.discover_weekly,
+      }
+
+    case 'SET_CURRENT_TRACK':
+      return {
+        ...state,
+        current_track: action.track,
       }
     default:
       return state;

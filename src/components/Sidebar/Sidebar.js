@@ -9,7 +9,7 @@ import { useDataLayerValue } from '../../utils/DataLayer';
 
 const Sidebar = () => {
   const [{ playlists }, dispatch] = useDataLayerValue();
-  console.log('ini masuk si playlists', playlists)
+
   return (
     <div className="sidebar">
       <img className="sidebar__logo" height="50px" style={{ padding: '20px', marginRight: 'auto' }} src={iconSpotifyLogo} alt="" />
